@@ -29,8 +29,10 @@ public class RabbitController {
     @PostMapping("/test2")
     public String test2() {
         String msg = "Hello World Again!";
-        sender1.send(msg);
-        sender2.send(msg);
+        for (int i = 0; i < 10; i++) {
+            sender1.send(msg);
+            sender2.send(msg);
+        }
         return "success";
     }
 }

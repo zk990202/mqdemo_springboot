@@ -14,6 +14,6 @@ public class Sender2 {
     public void send(String msg) {
         String sendMsg = msg + new Date();
         System.out.println("Sender2: " + sendMsg);
-        rabbitTemplate.convertAndSend("topicExchange", "key.2", msg);
+        rabbitTemplate.convertAndSend("directExchange", "directKey2", sendMsg);
     }
 }

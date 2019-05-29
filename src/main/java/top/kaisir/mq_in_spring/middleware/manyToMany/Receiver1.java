@@ -6,14 +6,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Receiver1 {
 
-    @RabbitListener(queues = "hello.queue1")
+    @RabbitListener(queues = "queue3")
     public void processMessage1(String msg) {
-        System.out.println("Receiver1: 接收到来自hello.queue1队列的消息：" + msg);
+        System.out.println("Receiver1: 接收到来自queue3队列的消息：" + msg);
     }
 
-    @RabbitListener(queues = "hello.queue2")
+    @RabbitListener(queues = "queue4")
     public void processMessage2(String msg) {
-        System.out.println("Receiver1: 接收到来自hello.queue2队列的消息：" + msg);
+        System.out.println("Receiver1: 接收到来自queue4队列的消息：" + msg);
     }
 
 }
